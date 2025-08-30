@@ -102,11 +102,11 @@ a desired columns+rows bound, and so on.
   [`render_stateful_widget`] (i.e. with some mutable state).
 
 ## Terminal image sizes and display scaling or DPI
-While ratatui-image goes to a great length to detect a rendered image's pixel size in terms of
+While ratatui-image goes to great lengths to detect a rendered image's pixel size in terms of
 "character cells that will be covered", via font pixel size detection, ultimately it's up to
 the terminal emulator to decide what exactly a pixel is. Because a pixel might be scaled on
 modern desktop environments, some terminal emulators decide to also scale images, and others
-don't, **it is possible that images sizes vary across terminals**, however, functionally
+don't, **it is possible that image sizes vary across terminals**, however, functionally
 ratatui-image does still "work" in the sense of correctly detecting the "covered" area - as
 long as this scaling is applied to both the image and the reported font pixel size.
 
@@ -129,7 +129,7 @@ The lib also includes a binary that renders an image file, but it is focused on 
 * `serde` for `#[derive]`s on [picker::ProtocolType] for convenience, because it might be
   useful to save it in some user configuration.
 * `image-defaults` (default) just enables `image/defaults` (`image` has `default-features =
-false`). To only support a selection of image formats and cut down dependencies, disable this
+false`). To only support a selection of image formats and cut down on dependencies, disable this
   feature, add `image` to your crate, and enable its features/formats as desired. See
   <https://doc.rust-lang.org/cargo/reference/features.html#feature-unification/>.
 * `tokio` whether to use tokio's `UnboundedSender` in `ThreadProtocol`
